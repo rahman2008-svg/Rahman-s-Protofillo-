@@ -1,141 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PRINCE AR ABDUR RAHMAN | Portfolio</title>
-  
-  <!-- CSS -->
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: #0e0e0e;
-      color: #fff;
-      overflow-x: hidden;
-    }
-
-    header {
-      text-align: center;
-      padding: 50px 20px;
-    }
-
-    h1 {
-      font-size: 3em;
-      margin-bottom: 10px;
-    }
-
-    section {
-      margin: 50px auto;
-      max-width: 800px;
-      text-align: center;
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    ul li {
-      display: inline-block;
-      margin: 0 15px;
-    }
-
-    a {
-      text-decoration: none;
-      color: #1abc9c;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
-    a:hover {
-      color: #ffffff;
-    }
-
-    canvas#bg {
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: -1;
-    }
-  </style>
-
-  <!-- Three.js Library for 3D -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PRINCE AR ABDUR RAHMAN | Portfolio</title>
+<style>
+body { margin:0; font-family:'Poppins', sans-serif; background:#0e0e0e; color:#fff; overflow-x:hidden;}
+header{text-align:center;padding:50px 20px;}
+h1{font-size:3em;margin-bottom:10px;}
+section{margin:50px auto;max-width:800px;text-align:center;}
+ul{list-style:none;padding:0;}
+ul li{display:inline-block;margin:0 15px;}
+a{text-decoration:none;color:#1abc9c;font-weight:bold;transition:0.3s;}
+a:hover{color:#fff;}
+canvas#bg{position:fixed;top:0;left:0;z-index:-1;}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
 <body>
-
-  <!-- Header -->
-  <header>
-    <h1>PRINCE AR ABDUR RAHMAN</h1>
-    <p>Almost 18 years old | Aspiring Developer & Designer</p>
-  </header>
-
-  <!-- Social Links -->
-  <section id="socials">
-    <h2>Connect with Me</h2>
-    <ul>
-      <li><a href="https://www.facebook.com/share/1CRoS5CxKC/" target="_blank">Facebook</a></li>
-      <li><a href="https://www.instagram.com/ur___abdur____rahman__2008?igsh=MTE4MDVoN2dpanVhNA==" target="_blank">Instagram</a></li>
-      <li><a href="https://wa.me/01707424006" target="_blank">WhatsApp</a></li>
-      <li><a href="https://youtube.com/@princearabdurrahman?si=fYa7BSbVZIRsFmun" target="_blank">YouTube</a></li>
-      <li><a href="https://github.com/rahman2008-svg" target="_blank">GitHub</a></li>
-    </ul>
-  </section>
-
-  <!-- Contact Info -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Phone: 01707424006 | 01796951709 | 0183246083</p>
-  </section>
-
-  <!-- About Me -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Hello! I am PRINCE AR ABDUR RAHMAN, almost 18 years old. I am passionate about technology, coding, graphic design, and creating modern 3D websites and apps. This portfolio showcases my work, projects, and social profiles.</p>
-  </section>
-
-  <!-- 3D Background -->
-  <canvas id="bg"></canvas>
-  <script>
-    // Three.js 3D moving spheres background
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
-    const renderer = new THREE.WebGLRenderer({canvas: document.getElementById('bg'), alpha: true});
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    camera.position.z = 30;
-
-    const geometry = new THREE.SphereGeometry(0.5, 32, 32);
-    const material = new THREE.MeshStandardMaterial({color: 0x1abc9c});
-    const spheres = [];
-
-    for(let i=0;i<150;i++){
-      const sphere = new THREE.Mesh(geometry, material);
-      sphere.position.set((Math.random()-0.5)*120, (Math.random()-0.5)*60, (Math.random()-0.5)*120);
-      scene.add(sphere);
-      spheres.push(sphere);
-    }
-
-    const light = new THREE.PointLight(0xffffff, 1);
-    light.position.set(50,50,50);
-    scene.add(light);
-
-    function animate(){
-      requestAnimationFrame(animate);
-      spheres.forEach(s => {
-        s.rotation.x += 0.01;
-        s.rotation.y += 0.01;
-      });
-      renderer.render(scene, camera);
-    }
-    animate();
-
-    window.addEventListener('resize', ()=>{
-      camera.aspect = window.innerWidth/window.innerHeight;
-      camera.updateProjectionMatrix();
-      renderer.setSize(window.innerWidth, window.innerHeight);
-    });
-  </script>
-
+<header>
+<h1>PRINCE AR ABDUR RAHMAN</h1>
+<p>18 years old | Aspiring Developer & Designer</p>
+</header>
+<section id="socials">
+<h2>Connect with Me</h2>
+<ul>
+<li><a href="https://www.facebook.com/share/1CRoS5CxKC/" target="_blank">Facebook</a></li>
+<li><a href="https://www.instagram.com/ur___abdur____rahman__2008?igsh=MTE4MDVoN2dpanVhNA==" target="_blank">Instagram</a></li>
+<li><a href="https://wa.me/01707424006" target="_blank">WhatsApp</a></li>
+<li><a href="https://youtube.com/@princearabdurrahman?si=fYa7BSbVZIRsFmun" target="_blank">YouTube</a></li>
+<li><a href="https://github.com/rahman2008-svg" target="_blank">GitHub</a></li>
+</ul>
+</section>
+<section id="contact">
+<h2>Contact</h2>
+<p>Phone: 01796951709, 0183246083</p>
+</section>
+<section id="about">
+<h2>About Me</h2>
+<p>Hello! I am PRINCE AR ABDUR RAHMAN, 18 years old. I am passionate about technology, design, and creating cool websites and apps. This is my portfolio to show my projects, skills, and social links.</p>
+</section>
+<canvas id="bg"></canvas>
+<script>
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
+const renderer = new THREE.WebGLRenderer({canvas: document.getElementById('bg'), alpha: true});
+renderer.setSize(window.innerWidth, window.innerHeight);
+camera.position.z = 30;
+const geometry = new THREE.SphereGeometry(0.5, 32, 32);
+const material = new THREE.MeshStandardMaterial({color: 0x1abc9c});
+const spheres = [];
+for(let i=0;i<100;i++){
+const sphere = new THREE.Mesh(geometry, material);
+sphere.position.set((Math.random()-0.5)*100, (Math.random()-0.5)*50, (Math.random()-0.5)*100);
+scene.add(sphere);
+spheres.push(sphere);
+}
+const light = new THREE.PointLight(0xffffff, 1);
+light.position.set(50,50,50);
+scene.add(light);
+function animate(){
+requestAnimationFrame(animate);
+spheres.forEach(s => { s.rotation.x += 0.01; s.rotation.y += 0.01; });
+renderer.render(scene, camera);
+}
+animate();
+window.addEventListener('resize', ()=>{
+camera.aspect = window.innerWidth/window.innerHeight;
+camera.updateProjectionMatrix();
+renderer.setSize(window.innerWidth, window.innerHeight);
+});
+</script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PRINCE AR ABDUR RAHMAN | Portfolio</title>
+<style>
+body { margin:0; font-family:'Poppins', sans-serif; background:#0e0e0e; color:#fff; overflow-x:hidden;}
+header{text-align:center;padding:50px 20px;}
+h1{font-size:3em;margin-bottom:10px;}
+section{margin:50px auto;max-width:800px;text-align:center;}
+ul{list-style:none;padding:0;}
+ul li{display:inline-block;margin:0 15px;}
+a{text-decoration:none;color:#1abc9c;font-weight:bold;transition:0.3s;}
+a:hover{color:#fff;}
+canvas#bg{position:fixed;top:0;left:0;z-index:-1;}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+<header>
+<h1>PRINCE AR ABDUR RAHMAN</h1>
+<p>18 years old | Aspiring Developer & Designer</p>
+</header>
+<section id="socials">
+<h2>Connect with Me</h2>
+<ul>
+<li><a href="https://www.facebook.com/share/1CRoS5CxKC/" target="_blank">Facebook</a></li>
+<li><a href="https://www.instagram.com/ur___abdur____rahman__2008?igsh=MTE4MDVoN2dpanVhNA==" target="_blank">Instagram</a></li>
+<li><a href="https://wa.me/01707424006" target="_blank">WhatsApp</a></li>
+<li><a href="https://youtube.com/@princearabdurrahman?si=fYa7BSbVZIRsFmun" target="_blank">YouTube</a></li>
+<li><a href="https://github.com/rahman2008-svg" target="_blank">GitHub</a></li>
+</ul>
+</section>
+<section id="contact">
+<h2>Contact</h2>
+<p>Phone: 01796951709, 0183246083</p>
+</section>
+<section id="about">
+<h2>About Me</h2>
+<p>Hello! I am PRINCE AR ABDUR RAHMAN, 18 years old. I am passionate about technology, design, and creating cool websites and apps. This is my portfolio to show my projects, skills, and social links.</p>
+</section>
+<canvas id="bg"></canvas>
+<script>
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
+const renderer = new THREE.WebGLRenderer({canvas: document.getElementById('bg'), alpha: true});
+renderer.setSize(window.innerWidth, window.innerHeight);
+camera.position.z = 30;
+const geometry = new THREE.SphereGeometry(0.5, 32, 32);
+const material = new THREE.MeshStandardMaterial({color: 0x1abc9c});
+const spheres = [];
+for(let i=0;i<100;i++){
+const sphere = new THREE.Mesh(geometry, material);
+sphere.position.set((Math.random()-0.5)*100, (Math.random()-0.5)*50, (Math.random()-0.5)*100);
+scene.add(sphere);
+spheres.push(sphere);
+}
+const light = new THREE.PointLight(0xffffff, 1);
+light.position.set(50,50,50);
+scene.add(light);
+function animate(){
+requestAnimationFrame(animate);
+spheres.forEach(s => { s.rotation.x += 0.01; s.rotation.y += 0.01; });
+renderer.render(scene, camera);
+}
+animate();
+window.addEventListener('resize', ()=>{
+camera.aspect = window.innerWidth/window.innerHeight;
+camera.updateProjectionMatrix();
+renderer.setSize(window.innerWidth, window.innerHeight);
+});
+</script>
 </body>
 </html>
