@@ -11,126 +11,72 @@
 <!-- CSS -->
 <style>
 * {margin:0; padding:0; box-sizing:border-box;}
-body {font-family:'Poppins', sans-serif; background:#0e0e0e; color:#fff;}
+body {font-family:'Poppins', sans-serif; background:#0e0e0e; color:#fff; overflow-x:hidden;}
 a {text-decoration:none; color:#1abc9c; transition:0.3s;}
 a:hover {color:#fff;}
-header {text-align:center; padding:80px 20px;}
-h1 {font-size:3em; margin-bottom:10px;}
-h2 {margin-bottom:20px;}
+header {text-align:center; position:relative; padding:120px 20px; z-index:2;}
+#welcome-text {font-size:3em; color:#1abc9c; text-shadow:0 0 20px #1abc9c; animation:fadeIn 2s ease forwards; margin-bottom:20px;}
+#anime-char {position:absolute; bottom:0; left:50%; transform:translateX(-50%); width:200px; animation:floatAnime 3s ease-in-out infinite; z-index:2;}
+@keyframes fadeIn {0%{opacity:0;} 100%{opacity:1;}}
+@keyframes floatAnime {0%,100%{transform:translate(-50%,0px);} 50%{transform:translate(-50%,-20px);}}
+
 section {padding:60px 20px; max-width:1000px; margin:auto; text-align:center;}
+h1,h2,h3{margin-bottom:20px;}
 ul.socials {list-style:none; display:flex; justify-content:center; gap:20px; margin-bottom:40px;}
 ul.socials li a {font-weight:bold; padding:10px 15px; border:1px solid #1abc9c; border-radius:5px;}
-.project, .book {background:rgba(255,255,255,0.05); padding:20px; margin:20px 0; border-radius:10px;}
+.project, .book {background:rgba(255,255,255,0.05); padding:20px; margin:20px 0; border-radius:15px; box-shadow:0 0 20px rgba(26,188,156,0.2);}
 input, textarea, button {padding:10px; margin:5px 0; border-radius:5px; border:none; width:100%;}
 button {background:#1abc9c; color:#000; font-weight:bold; cursor:pointer;}
 footer {text-align:center; padding:20px; background:#111; margin-top:50px;}
 canvas#bg {position:fixed; top:0; left:0; z-index:-1;}
 </style>
 
-<!-- Three.js for 3D background -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
-
 <body>
 
-<!-- Header / Hero Section -->
+<!-- Hero Section -->
 <header>
-<h1>PRINCE AR ABDUR RAHMAN</h1>
-<p>18 years old | Aspiring Developer, Designer & Writer</p>
+  <h1 id="welcome-text">Welcome to My Profile</h1>
+  <img src="https://i.ibb.co/3dXc5ZK/anime-girl.gif" id="anime-char" alt="Anime Character">
+  <h2>PRINCE AR ABDUR RAHMAN | 18 years old | Developer & Writer</h2>
 </header>
 
 <!-- About Me -->
 <section id="about">
 <h2>About Me</h2>
-<p>Hello! I am PRINCE AR ABDUR RAHMAN. I am passionate about technology, web design, 3D graphics, and writing. Currently studying at <strong>Sunflower School & College</strong> and previously at <strong>Sonaraya Songlashi High School</strong>. I live in Nilphamari, near Uttara EPZ.</p>
+<p>I study at <strong>Sunflower School & College</strong> (previously Sonaraya Songlashi High School). I live in Nilphamari, near Uttara EPZ. I am passionate about technology, web design, 3D graphics, and writing books.</p>
 </section>
 
-<!-- Services -->
-<section id="services">
-<h2>Services I Provide</h2>
-<ul>
-<li>Website Development (HTML/CSS/JS)</li>
-<li>3D Graphic Design</li>
-<li>Portfolio & Resume Design</li>
-<li>App Development (Python / Flask)</li>
-<li>Social Media Branding</li>
-<li>Writing & Content Creation</li>
-</ul>
-</section>
-
-<!-- Projects / Portfolio -->
-<section id="projects">
-<h2>My Projects</h2>
-<div class="project">
-<h3>Bangla Dictionary App</h3>
-<p>Python + Flask + Termux + Render deployment</p>
-<a href="https://github.com/rahman2008-svg/Bangla-Dictionary" target="_blank">View on GitHub</a>
-</div>
-<div class="project">
-<h3>3D Portfolio Website</h3>
-<p>HTML, CSS, JS, Three.js interactive background</p>
-<a href="https://rahman-s-protofillo.onrender.com" target="_blank">View Live</a>
-</div>
-</section>
-
-<!-- Books / Writing -->
+<!-- Books -->
 <section id="books">
-<h2>Books I Wrote</h2>
+<h2>📚 Books I Wrote</h2>
 <div class="book">
-<h3>Book Title 1</h3>
-<p>Short description about the book content, genre or inspiration.</p>
+  <h3>The Creator</h3>
+  <p>A book about creativity, self-growth, and turning ideas into reality.</p>
 </div>
 <div class="book">
-<h3>Book Title 2</h3>
-<p>Another book description goes here.</p>
+  <h3>Mind Mistry</h3>
+  <p>Exploring the mysteries of the human mind and developing mental strength.</p>
 </div>
-</section>
-
-<!-- Skills & Tech Stack -->
-<section id="skills">
-<h2>Skills & Tools</h2>
-<ul>
-<li>HTML / CSS / JavaScript</li>
-<li>Python / Flask</li>
-<li>Three.js / 3D Graphics</li>
-<li>Git / GitHub / Render</li>
-<li>UI / UX Design</li>
-<li>Adobe Photoshop</li>
-<li>Writing & Content Creation</li>
-</ul>
-</section>
-
-<!-- Experience / Resume -->
-<section id="experience">
-<h2>Experience & Resume</h2>
-<p>Worked on multiple personal projects, apps, portfolio websites, and books. Download Resume: <a href="#">Click Here</a></p>
-</section>
-
-<!-- Testimonials / Social Proof -->
-<section id="testimonials">
-<h2>Testimonials</h2>
-<p>"Prince is a passionate developer, designer, and writer. His projects are creative and interactive." – Mentor / Client</p>
+<div class="book">
+  <h3>Motion</h3>
+  <p>Personal development, motivation, and action-oriented guidance.</p>
+</div>
 </section>
 
 <!-- Contact -->
 <section id="contact">
-<h2>Contact Me</h2>
-<p>Email: prince.ar.abdur.rahman2008@gmail.com</p>
-<p>Phone: 01796951709, 01832468503</p>
-<p>WhatsApp & Telegram: 01707424006</p>
+<h2>📬 Contact Me</h2>
+<p><strong>Email:</strong> <a href="mailto:prince.ar.abdur.rahman2008@gmail.com">prince.ar.abdur.rahman2008@gmail.com</a></p>
+<p><strong>Phone:</strong> 01796951709, 01832468503</p>
+<p><strong>WhatsApp / Telegram:</strong> 01707424006</p>
 <ul class="socials">
 <li><a href="https://www.facebook.com/share/1GaYdUMNbr/" target="_blank">Facebook</a></li>
 <li><a href="https://www.instagram.com/ur___abdur____rahman__2008?igsh=MTE4MDVoN2dpanVhNA==" target="_blank">Instagram</a></li>
 <li><a href="https://youtube.com/@princearabdurrahman?si=fYa7BSbVZIRsFmun" target="_blank">YouTube</a></li>
 <li><a href="https://github.com/rahman2008-svg" target="_blank">GitHub</a></li>
 </ul>
-
-<form action="mailto:prince.ar.abdur.rahman2008@gmail.com" method="post">
-<input type="text" name="name" placeholder="Your Name" required>
-<input type="email" name="email" placeholder="Your Email" required>
-<textarea name="message" placeholder="Message" required></textarea>
-<button type="submit">Send</button>
-</form>
 </section>
 
 <!-- Footer -->
@@ -141,10 +87,10 @@ canvas#bg {position:fixed; top:0; left:0; z-index:-1;}
 <!-- 3D Background -->
 <canvas id="bg"></canvas>
 <script>
-const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
-const renderer = new THREE.WebGLRenderer({canvas: document.getElementById('bg'), alpha:true});
-renderer.setSize(window.innerWidth, window.innerHeight);
+const scene=new THREE.Scene();
+const camera=new THREE.PerspectiveCamera(75,window.innerWidth/window.innerHeight,0.1,1000);
+const renderer=new THREE.WebGLRenderer({canvas:document.getElementById('bg'), alpha:true});
+renderer.setSize(window.innerWidth,window.innerHeight);
 camera.position.z=30;
 const geometry=new THREE.SphereGeometry(0.5,32,32);
 const material=new THREE.MeshStandardMaterial({color:0x1abc9c});
@@ -160,6 +106,18 @@ scene.add(light);
 function animate(){requestAnimationFrame(animate); spheres.forEach(s=>{s.rotation.x+=0.01; s.rotation.y+=0.01;}); renderer.render(scene,camera);}
 animate();
 window.addEventListener('resize',()=>{camera.aspect=window.innerWidth/window.innerHeight; camera.updateProjectionMatrix(); renderer.setSize(window.innerWidth, window.innerHeight);});
+</script>
+
+<!-- Anime Character Movement -->
+<script>
+const animeChar=document.getElementById("anime-char");
+let posX=50;
+let direction=1;
+setInterval(()=>{
+  posX+=0.2*direction;
+  if(posX>60||posX<40) direction*=-1;
+  animeChar.style.left=posX+"%";
+},20);
 </script>
 
 </body>
