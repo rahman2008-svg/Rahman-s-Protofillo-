@@ -15,10 +15,10 @@ body {font-family:'Poppins', sans-serif; background:#0e0e0e; color:#fff; overflo
 a {text-decoration:none; color:#1abc9c; transition:0.3s;}
 a:hover {color:#fff;}
 header {text-align:center; position:relative; padding:120px 20px; z-index:2;}
-#welcome-text {font-size:3em; color:#1abc9c; text-shadow:0 0 20px #1abc9c; animation:fadeIn 2s ease forwards; margin-bottom:20px;}
-#anime-char {position:absolute; bottom:0; left:50%; transform:translateX(-50%); width:200px; animation:floatAnime 3s ease-in-out infinite; z-index:2;}
+#welcome-text {font-size:2em; color:#1abc9c; text-shadow:0 0 15px #1abc9c; animation:fadeIn 2s ease forwards; margin-bottom:20px;}
+#anime-char {position:absolute; bottom:0; left:50%; transform:translateX(-50%); width:150px; animation:floatAnime 3s ease-in-out infinite; z-index:2;}
 @keyframes fadeIn {0%{opacity:0;} 100%{opacity:1;}}
-@keyframes floatAnime {0%,100%{transform:translate(-50%,0px);} 50%{transform:translate(-50%,-20px);}}
+@keyframes floatAnime {0%,100%{transform:translate(-50%,0px);} 50%{transform:translate(-50%,-15px);}}
 
 section {padding:60px 20px; max-width:1000px; margin:auto; text-align:center;}
 h1,h2,h3{margin-bottom:20px;}
@@ -29,6 +29,8 @@ input, textarea, button {padding:10px; margin:5px 0; border-radius:5px; border:n
 button {background:#1abc9c; color:#000; font-weight:bold; cursor:pointer;}
 footer {text-align:center; padding:20px; background:#111; margin-top:50px;}
 canvas#bg {position:fixed; top:0; left:0; z-index:-1;}
+.contact-info {margin-bottom:15px; font-size:1.1em;}
+.contact-links a {display:block; margin:5px 0;}
 </style>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
@@ -37,9 +39,9 @@ canvas#bg {position:fixed; top:0; left:0; z-index:-1;}
 
 <!-- Hero Section -->
 <header>
-  <h1 id="welcome-text">Welcome to My Profile</h1>
+  <h1>PRINCE AR ABDUR RAHMAN</h1>
+  <h2 id="welcome-text">Welcome 👋</h2>
   <img src="https://i.ibb.co/3dXc5ZK/anime-girl.gif" id="anime-char" alt="Anime Character">
-  <h2>PRINCE AR ABDUR RAHMAN | 18 years old | Developer & Writer</h2>
 </header>
 
 <!-- About Me -->
@@ -68,15 +70,19 @@ canvas#bg {position:fixed; top:0; left:0; z-index:-1;}
 <!-- Contact -->
 <section id="contact">
 <h2>📬 Contact Me</h2>
-<p><strong>Email:</strong> <a href="mailto:prince.ar.abdur.rahman2008@gmail.com">prince.ar.abdur.rahman2008@gmail.com</a></p>
-<p><strong>Phone:</strong> 01796951709, 01832468503</p>
-<p><strong>WhatsApp / Telegram:</strong> 01707424006</p>
-<ul class="socials">
-<li><a href="https://www.facebook.com/share/1GaYdUMNbr/" target="_blank">Facebook</a></li>
-<li><a href="https://www.instagram.com/ur___abdur____rahman__2008?igsh=MTE4MDVoN2dpanVhNA==" target="_blank">Instagram</a></li>
-<li><a href="https://youtube.com/@princearabdurrahman?si=fYa7BSbVZIRsFmun" target="_blank">YouTube</a></li>
-<li><a href="https://github.com/rahman2008-svg" target="_blank">GitHub</a></li>
-</ul>
+
+<div class="contact-info">
+<strong>Email:</strong> prince.ar.abdur.rahman2008@gmail.com<br>
+<strong>Phone:</strong> 01796951709, 01832468503<br>
+<strong>WhatsApp / Telegram:</strong> 01707424006
+</div>
+
+<div class="contact-links">
+<a href="https://www.facebook.com/share/1GaYdUMNbr/" target="_blank">Facebook</a>
+<a href="https://www.instagram.com/ur___abdur____rahman__2008?igsh=MTE4MDVoN2dpanVhNA==" target="_blank">Instagram</a>
+<a href="https://youtube.com/@princearabdurrahman?si=fYa7BSbVZIRsFmun" target="_blank">YouTube</a>
+<a href="https://github.com/rahman2008-svg" target="_blank">GitHub</a>
+</div>
 </section>
 
 <!-- Footer -->
