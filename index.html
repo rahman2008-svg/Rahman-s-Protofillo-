@@ -10,38 +10,32 @@
 
 <!-- CSS -->
 <style>
-* {margin:0; padding:0; box-sizing:border-box;}
-body {font-family:'Poppins', sans-serif; background:#0e0e0e; color:#fff; overflow-x:hidden;}
-a {text-decoration:none; color:#1abc9c; transition:0.3s;}
-a:hover {color:#fff;}
-header {text-align:center; position:relative; padding:120px 20px; z-index:2;}
-#welcome-text {font-size:2em; color:#1abc9c; text-shadow:0 0 15px #1abc9c; animation:fadeIn 2s ease forwards; margin-bottom:20px;}
-#anime-char {position:absolute; bottom:0; left:50%; transform:translateX(-50%); width:150px; animation:floatAnime 3s ease-in-out infinite; z-index:2;}
-@keyframes fadeIn {0%{opacity:0;} 100%{opacity:1;}}
-@keyframes floatAnime {0%,100%{transform:translate(-50%,0px);} 50%{transform:translate(-50%,-15px);}}
-
-section {padding:60px 20px; max-width:1000px; margin:auto; text-align:center;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Poppins',sans-serif;background:#0e0e0e;color:#fff;overflow:hidden;}
+a{text-decoration:none;color:#1abc9c;transition:0.3s;}
+a:hover{color:#fff;}
+header{position:relative;text-align:center;padding:100px 20px;z-index:2;}
+#profile-name{font-size:3em;color:#1abc9c;text-shadow:0 0 20px #1abc9c;}
+#welcome-text{font-size:1.5em;color:#fff;margin:10px 0;}
+section{padding:40px 20px;max-width:1000px;margin:auto;text-align:center;}
 h1,h2,h3{margin-bottom:20px;}
-ul.socials {list-style:none; display:flex; justify-content:center; gap:20px; margin-bottom:40px;}
-ul.socials li a {font-weight:bold; padding:10px 15px; border:1px solid #1abc9c; border-radius:5px;}
-.project, .book {background:rgba(255,255,255,0.05); padding:20px; margin:20px 0; border-radius:15px; box-shadow:0 0 20px rgba(26,188,156,0.2);}
-input, textarea, button {padding:10px; margin:5px 0; border-radius:5px; border:none; width:100%;}
-button {background:#1abc9c; color:#000; font-weight:bold; cursor:pointer;}
-footer {text-align:center; padding:20px; background:#111; margin-top:50px;}
-canvas#bg {position:fixed; top:0; left:0; z-index:-1;}
-.contact-info {margin-bottom:15px; font-size:1.1em;}
-.contact-links a {display:block; margin:5px 0;}
+ul.socials{list-style:none;display:flex;justify-content:center;gap:20px;margin-bottom:20px;}
+ul.socials li a{font-weight:bold;padding:10px 15px;border:1px solid #1abc9c;border-radius:5px;}
+.project,.book{background:rgba(255,255,255,0.05);padding:20px;margin:20px 0;border-radius:15px;box-shadow:0 0 20px rgba(26,188,156,0.2);}
+input,textarea,button{padding:10px;margin:5px 0;border-radius:5px;border:none;width:100%;}
+button{background:#1abc9c;color:#000;font-weight:bold;cursor:pointer;}
+footer{text-align:center;padding:20px;background:#111;margin-top:50px;}
+canvas#bg{position:fixed;top:0;left:0;z-index:-1;}
 </style>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
 <body>
 
-<!-- Hero Section -->
+<!-- Header / Hero -->
 <header>
-  <h1>PRINCE AR ABDUR RAHMAN</h1>
-  <h2 id="welcome-text">Welcome 👋</h2>
-  <img src="https://i.ibb.co/3dXc5ZK/anime-girl.gif" id="anime-char" alt="Anime Character">
+  <h1 id="profile-name">PRINCE AR ABDUR RAHMAN</h1>
+  <p id="welcome-text">Welcome to My Profile</p>
 </header>
 
 <!-- About Me -->
@@ -55,34 +49,51 @@ canvas#bg {position:fixed; top:0; left:0; z-index:-1;}
 <h2>📚 Books I Wrote</h2>
 <div class="book">
   <h3>The Creator</h3>
-  <p>A book about creativity, self-growth, and turning ideas into reality.</p>
+  <p>Creativity, self-growth, turning ideas into reality.</p>
 </div>
 <div class="book">
   <h3>Mind Mistry</h3>
-  <p>Exploring the mysteries of the human mind and developing mental strength.</p>
+  <p>Exploring the mysteries of the human mind.</p>
 </div>
 <div class="book">
   <h3>Motion</h3>
-  <p>Personal development, motivation, and action-oriented guidance.</p>
+  <p>Personal development, motivation, and action guidance.</p>
 </div>
+</section>
+
+<!-- Projects -->
+<section id="projects">
+<h2>💻 My Projects</h2>
+<div class="project">
+<h3>Bangla Dictionary App</h3>
+<p>Python + Flask + Termux + Render</p>
+<a href="https://github.com/rahman2008-svg/Bangla-Dictionary" target="_blank">View on GitHub</a>
+</div>
+<div class="project">
+<h3>3D Portfolio Website</h3>
+<p>HTML, CSS, JS, Three.js interactive background</p>
+<a href="https://rahman-s-protofillo.onrender.com" target="_blank">View Live</a>
+</div>
+</section>
+
+<!-- Skills -->
+<section id="skills">
+<h2>Skills & Tools</h2>
+<p>HTML | CSS | JavaScript | Python | Flask | Three.js | Photoshop | UI/UX | Git/GitHub | Render</p>
 </section>
 
 <!-- Contact -->
 <section id="contact">
 <h2>📬 Contact Me</h2>
-
-<div class="contact-info">
-<strong>Email:</strong> prince.ar.abdur.rahman2008@gmail.com<br>
-<strong>Phone:</strong> 01796951709, 01832468503<br>
-<strong>WhatsApp / Telegram:</strong> 01707424006
-</div>
-
-<div class="contact-links">
-<a href="https://www.facebook.com/share/1GaYdUMNbr/" target="_blank">Facebook</a>
-<a href="https://www.instagram.com/ur___abdur____rahman__2008?igsh=MTE4MDVoN2dpanVhNA==" target="_blank">Instagram</a>
-<a href="https://youtube.com/@princearabdurrahman?si=fYa7BSbVZIRsFmun" target="_blank">YouTube</a>
-<a href="https://github.com/rahman2008-svg" target="_blank">GitHub</a>
-</div>
+<p><strong>Email:</strong> <a href="mailto:prince.ar.abdur.rahman2008@gmail.com">prince.ar.abdur.rahman2008@gmail.com</a></p>
+<p><strong>Phone:</strong> 01796951709, 01832468503</p>
+<p><strong>WhatsApp / Telegram:</strong> 01707424006</p>
+<ul class="socials" id="socials">
+<li><a href="https://www.facebook.com/share/1GaYdUMNbr/" target="_blank">Facebook</a></li>
+<li><a href="https://www.instagram.com/ur___abdur____rahman__2008?igsh=MTE4MDVoN2dpanVhNA==" target="_blank">Instagram</a></li>
+<li><a href="https://youtube.com/@princearabdurrahman?si=fYa7BSbVZIRsFmun" target="_blank">YouTube</a></li>
+<li><a href="https://github.com/rahman2008-svg" target="_blank">GitHub</a></li>
+</ul>
 </section>
 
 <!-- Footer -->
@@ -93,9 +104,10 @@ canvas#bg {position:fixed; top:0; left:0; z-index:-1;}
 <!-- 3D Background -->
 <canvas id="bg"></canvas>
 <script>
+// Three.js spheres
 const scene=new THREE.Scene();
 const camera=new THREE.PerspectiveCamera(75,window.innerWidth/window.innerHeight,0.1,1000);
-const renderer=new THREE.WebGLRenderer({canvas:document.getElementById('bg'), alpha:true});
+const renderer=new THREE.WebGLRenderer({canvas:document.getElementById('bg'),alpha:true});
 renderer.setSize(window.innerWidth,window.innerHeight);
 camera.position.z=30;
 const geometry=new THREE.SphereGeometry(0.5,32,32);
@@ -112,18 +124,6 @@ scene.add(light);
 function animate(){requestAnimationFrame(animate); spheres.forEach(s=>{s.rotation.x+=0.01; s.rotation.y+=0.01;}); renderer.render(scene,camera);}
 animate();
 window.addEventListener('resize',()=>{camera.aspect=window.innerWidth/window.innerHeight; camera.updateProjectionMatrix(); renderer.setSize(window.innerWidth, window.innerHeight);});
-</script>
-
-<!-- Anime Character Movement -->
-<script>
-const animeChar=document.getElementById("anime-char");
-let posX=50;
-let direction=1;
-setInterval(()=>{
-  posX+=0.2*direction;
-  if(posX>60||posX<40) direction*=-1;
-  animeChar.style.left=posX+"%";
-},20);
 </script>
 
 </body>
